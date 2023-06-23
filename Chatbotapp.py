@@ -1,8 +1,10 @@
 #Importing necessary libraries
 import nltk
 nltk.download('punkt')
+nltk.download('wordnet')
 nltk.download('averaged_perceptron_tagger')
 nltk.download('stopwords')
+nltk.download('omw-1.4')
 from nltk.tokenize import word_tokenize, sent_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
@@ -10,7 +12,7 @@ import string
 import streamlit as st
 import os
 # Load the text file and preprocess the data
-file_path = os.path.normpath(r'C:\Users\hp 14\Desktop\Chatbot\gutenberg.org_files_16547_16547.txt')
+file_path = os.path.normpath("gutenberg.org_files_16547_16547.txt")
 with open(file_path, 'r', encoding='utf-8') as f:
     data = f.read().replace('\n', ' ')
 # Tokenize the text into sentences
